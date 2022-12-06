@@ -1,0 +1,31 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-color:antiquewhite;
+  margin-bottom: 60px;
+  
+}
+h2 {
+    color: brown;
+}
+ul{
+
+}
+
+p {
+    font-family:Calibi;
+    background-color:gainsboro;
+}
