@@ -3,8 +3,71 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script>
+        function getSum() {
+            let x = document.getElementById('firstNumber');
+            let y = document.getElementById('secondNumber');
+            let sum = parseInt(x.value) + parseInt(y.value);
+            alert("The sum is " + sum);
+            document.getElementById('answer').innerHTML = "Solution = " + sum;
+        }
+        function getDifference() {
+            let x = document.getElementById('firstNumber');
+            let y = document.getElementById('secondNumber');
+            let sum = parseInt(x.value) - parseInt(y.value);
+            alert("The Difference is " + sum);
+            document.getElementById('answer').innerHTML = "Solution = " + sum;
+
+        }
+        function getProduct() {
+            let x = document.getElementById('firstNumber');
+            let y = document.getElementById('secondNumber');
+            let sum = parseInt(x.value) * parseInt(y.value);
+            alert("The Product is " + sum);
+            document.getElementById('answer').innerHTML = "Solution = " + sum;
+
+        }
+        function getQuotient() {
+            let x = document.getElementById('firstNumber');
+            let y = document.getElementById('secondNumber');
+            let sum = parseInt(x.value) / parseInt(y.value);
+            alert("The Quotient is " + sum);
+            document.getElementById('answer').innerHTML = "Solution = " + sum;
+
+        }
+
+    </script>
 </head>
 <body>
+    <h2>Math</h2>
+    <p>
+        We are going to do some math please enter
+        the numbers you would like to perform math on
+    </p>
+    <div id="inputs">
+        <div>
+            <label>First number</label>
+            <input type="number" id="firstNumber" required="required" />
+        </div>
+        <div>
+            <label>Second number</label>
+            <input type="number" id="secondNumber" required="required" />
+        </div>
+    </div>
+   
+    <div id="buttons">
+        <input type="button" value="Add" onclick="getSum()" />
+        <input type="button" value="Subtract" onclick="getDifference()" />
+        <input type="button" value="Multiply" onclick="getProduct()" />
+        <input type="button" value="Divided" onclick="getQuotient()" />
+
+    </div>    
+    <div>
+        <p id="answer">
+            Solution =
+        </p>
+
+    </div>
 
 </body>
 </html>

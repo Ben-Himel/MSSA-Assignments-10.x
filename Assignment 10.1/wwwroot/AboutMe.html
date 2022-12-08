@@ -1,13 +1,36 @@
 ﻿<!DOCTYPE html>
 <html>
+<!--HEAD-->
 <head>
     <meta charset="utf-8" />
     <title></title>
     <link href="css/site.css" rel="stylesheet" type="text/css" />
+    <!--SCRIPTS-->
+    <script>
+        var x = document.getElementById("geolocationid");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
 </head>
+<!--BODY-->
 <body>
     <img src="images/20220719_212131.jpg" width="300" height="246" />
-    <br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gBsrcppEC7Q"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    <br />
     <a href="https://github.com/Ben-Himel">Check out my GitHub!</a>
     <h2>About Me: Ben Ryan Himel</h2>
     <p>
@@ -33,6 +56,13 @@
         <li>Learn Azure Platform</li>
         <li>Graduate from MSSA</li>
     </ol>
+
+    <div ="geolocationblock">
+        <p>Click the button to get your coordinates.</p>
+        <button onclick="getLocation()">Get Location</button>
+        <p id="geolocationid"></p>
+    </div>
+
 
 </body>
 </html>
